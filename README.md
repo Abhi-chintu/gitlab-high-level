@@ -1,4 +1,4 @@
-# gitlab-high-level
+# GITLAB
 
 Benefits of using Gitlab CI/CD
 ------------------------------
