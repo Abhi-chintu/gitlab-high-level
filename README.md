@@ -73,6 +73,53 @@ only to the main branch. Instead of giving **only** to each and every stages we 
 
 <img width="331" alt="image" src="https://github.com/Abhi-chintu/gitlab-high-level/assets/94033251/6db0de25-c27c-4525-9362-66893e3cdfec">
 
+# What are Executors in GitLab
+
+GitLab Runner implements a number of executors that can be used to run your builds in different environments.
+GitLab Runner provides the following executors:
+
+	SSH
+	Shell
+	Parallels
+	VirtualBox
+	Docker
+	Docker Autoscaler (Beta)
+	Docker Machine (auto-scaling)
+	Kubernetes
+	Instance (Beta)
+	Custom
+ # Job execution flow in Gitlab
+
+ <img width="817" alt="image" src="https://github.com/Abhi-chintu/gitlab-high-level/assets/94033251/20f6081f-ad82-4164-b3fa-154b7f757d9a">
+
+ 1. Runner rquests new job from GitLab instance.
+ 2. Runner compiles and sends the job's payload to Executor.
+ 3. Executor clones sources or downloads artifacts from Gitlab instance.
+ 4. Executor returns job output and status to the Runner.
+ 5. Runner updates job output and status to Gitlab instance.
+
+# Shared Runners on GitLab
+
+1. By default, Gitlab uses one of its shared runners to run your CI/CD Jobs.
+2. These shared runners are maintained by GitLab
+3. Docker machine Executors are used for them.
+
+# Specific Runners on Gitlab
+
+These Runners are used for the specific project. Consider a organisation has different project teams and one team cannot share the runner with other so at that time these specific Runners are utilized.	
+
+- These are self managed runners and maintained by users were create, update and configurations are done by users.
+- First set up machine
+- install gitlab runner program
+- Connect to gitlab instance
+
+To Configure Runner 
+1. Install Runner on any machine such as laptop, server, or cloud. And you can install runner on Any operating system.
+2. Register the gitlab runner on the gitlab server
+
+
+
+
 
 
 
