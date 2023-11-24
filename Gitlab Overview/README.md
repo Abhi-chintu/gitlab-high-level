@@ -18,6 +18,28 @@ If your using Linux operating system in AWS
 4. Now you can see the new runner in the UI
 <img width="325" alt="image" src="https://github.com/Abhi-chintu/gitlab-high-level/assets/94033251/98893076-c5f0-43f8-aa4b-0541caa295cd">
 
+# Gitlab Docker registry
+<img width="394" alt="image" src="https://github.com/Abhi-chintu/gitlab-high-level/assets/94033251/a1aa87bf-aaf1-4767-86c8-dbc60d859d43">
+
+- Package Registry = Use Gitlab as private or public registry for variety of supported package managers like Maven, npm, etc...
+- Container Registry = Registry to store Docker images, were we push the docker images .
+
+# Before building the image 
+1. Add User to Docker Group:
+   
+		sudo usermod -aG docker $USER
+3. Adjust Docker Socket Permissions:
+
+	   sudo ls -la /var/run/docker.sock
+	   sudo chmod 666 /var/run/docker.sock
+
+4. Restart Docker and CI Runner:
+
+		 sudo service docker restart
+		 sudo gitlab-runner restart
+
+
+
 
 
 
