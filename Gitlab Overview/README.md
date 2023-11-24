@@ -28,12 +28,9 @@ If your using Linux operating system in AWS
 1. Add User to Docker Group:
    
 		sudo usermod -aG docker $USER
-3. Adjust Docker Socket Permissions:
 
-	   sudo ls -la /var/run/docker.sock
-	   sudo chmod 666 /var/run/docker.sock
 
-4. Restart Docker and CI Runner:
+2. Restart Docker and CI Runner:
 
 		 sudo service docker restart
 		 sudo gitlab-runner restart
