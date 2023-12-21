@@ -28,9 +28,10 @@ If your using Linux operating system in AWS
 1. Add User to Docker Group:
    
 		sudo usermod -aG docker $USER
+		sudo usermod -aG docker gitlab-runner
 
 
-2. Restart Docker and CI Runner:
+3. Restart Docker and CI Runner:
 
 		 sudo service docker restart
 		 sudo gitlab-runner restart
